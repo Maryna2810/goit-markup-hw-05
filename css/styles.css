@@ -480,6 +480,7 @@ body {
 
 .subscribe-form {
   display: flex;
+  gap: 24px;
 }
 
 .subscribe-text {
@@ -488,6 +489,7 @@ body {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #fff;
+  margin-bottom: 16px;
 }
 
 .subscribe-input-form {
@@ -509,7 +511,7 @@ body {
   align-items: center;
   border-radius: 4px;
   padding: 8px 24px;
-  width: 165px;
+  min-width: 165px;
   height: 40px;
   background-color: #4d5ae5;
   font-weight: 500;
@@ -520,6 +522,8 @@ body {
   color: #fff;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
   margin-left: 24px;
+  cursor: pointer;
+  border: none;
 }
 .subscribe-btn .icon {
   margin-left: 16px;
@@ -605,8 +609,8 @@ body {
 }
 
 .order-form-modal {
-  margin-bottom: 16px;
   position: relative;
+  margin-bottom: 8px;
 }
 .modal-label {
   display: block;
@@ -618,6 +622,9 @@ body {
   margin-bottom: 4px;
 }
 
+.modal-field {
+  position: relative;
+}
 .modern-input {
   border: 1px solid rgba(46, 47, 66, 0.4);
   padding-left: 38px;
@@ -673,7 +680,7 @@ body {
   margin-bottom: 24px;
 }
 
-.chekbox-input:checked + .chekbox-label > .custom-chekbox {
+.chekbox-input:checked + .custom-chekbox {
   background-color: #404bbd;
   fill: #f4f4fd;
   border: none;
