@@ -456,6 +456,7 @@ body {
 
 .container-footer-text {
   margin-right: 120px;
+  width: 264px;
 }
 
 .media-container {
@@ -480,6 +481,7 @@ body {
 .subscribe-form {
   display: flex;
 }
+
 .subscribe-text {
   font-weight: 500;
   font-size: 16px;
@@ -489,6 +491,12 @@ body {
 }
 
 .subscribe-input-form {
+  color: #fff;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  background: transparent;
+  padding: 8px 16px;
   border: 1px solid #fff;
   border-radius: 4px;
   width: 264px;
@@ -496,15 +504,36 @@ body {
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
 }
 .subscribe-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 4px;
   padding: 8px 24px;
   width: 165px;
   height: 40px;
   background-color: #4d5ae5;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  text-align: center;
+  color: #fff;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  margin-left: 24px;
+}
+.subscribe-btn .icon {
+  margin-left: 16px;
+}
+.subscribe-btn:hover,
+.subscribe-btn:focus {
+  background-color: #404bbf;
 }
 
 .backdrop {
+  display: flex;
   position: fixed;
+  justify-content: center;
+  align-items: center;
   top: 0;
   left: 0;
   width: 100%;
@@ -514,11 +543,11 @@ body {
   visibility: hidden;
   pointer-events: none;
   z-index: 9999;
-  transition: opacity var(--animation), visibility var(--animation);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .backdrop.is-open {
   opacity: 1;
-  visibility: visible;
+
   pointer-events: auto;
 }
 .modal {
@@ -541,18 +570,26 @@ body {
   position: absolute;
   top: 24px;
   right: 24px;
-  border-radius: 100%;
-  border: none;
+  border-radius: 50%;
+  padding: 0;
   width: 24;
   height: 24;
   border: 1px solid rgba(0, 0, 0, 0.1);
   align-items: center;
   justify-content: center;
+  background-color: #e7e9fc;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-close-btn:hover,
+.modal-close-btn:focus {
+  background-color: #404bbf;
+  border: none;
 }
 
 .close-icon {
   stroke: #2e2f42;
-  transition: stroke var(--animation);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 0;
 }
 
 .modal-text {
@@ -582,31 +619,35 @@ body {
 }
 .modern-input {
   border: 1px solid rgba(46, 47, 66, 0.4);
-  padding-left: 58px;
+  padding-left: 38px;
   border-radius: 4px;
   width: 100%;
   height: 40px;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
   background-color: transparent;
+  outline: transparent;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modern-input:focus {
-  outline: none;
   border: 1px solid #4d5ae5;
 }
 
 .modern-input:focus + .modal-icon {
-  stroke: #4d5ae5;
+  fill: #4d5ae5;
 }
 
 .modal-icon {
+  fill: #2e2f42;
   position: absolute;
   top: 50%;
-  left: 24px;
+  left: 16px;
   transform: translateY(-50%);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.modal-icon:focus {
-  stroke: #4d5ae5;
-}
+
 .modal-textarea {
   resize: none;
   border: 1px solid rgba(46, 47, 66, 0.4);
@@ -615,12 +656,17 @@ body {
   height: 120px;
 }
 
+.chekbox-wrapper {
+  margin-bottom: 24px;
+}
+
 .chekbox-input:checked + .chekbox-label > .custom-chekbox {
-  background-color: #4d5ae5;
-  fill: #fff;
+  background-color: #404bbd;
+  fill: #f4f4fd;
   border: none;
 }
 .chekbox-label {
+  display: block;
   font-weight: 400;
   font-size: 12px;
   line-height: 1.16;
@@ -629,15 +675,17 @@ body {
 }
 
 .custom-chekbox {
-  display: inline-block;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   width: 16px;
   right: 16px;
-  display: flex;
+
   border-radius: 2px;
-  border: 1px solid #404bbf;
+  border: 1px solid rgba(46, 47, 66, 0.4);
   fill: transparent;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .custom-chekbox-icon {
@@ -648,6 +696,8 @@ body {
   color: #4d5ae5;
 }
 .modal-submit-btn {
+  display: block;
+  margin: 24px auto 0px;
   border-radius: 4px;
   padding: 16px 32px;
   width: 169px;
@@ -660,6 +710,9 @@ body {
   letter-spacing: 0.04em;
   text-align: center;
   color: #fff;
+}
 
-  margin-top: 24px;
+.modal-submit-btn:hover,
+.modal-submit-btn:focus {
+  background-color: #404bbf;
 }
