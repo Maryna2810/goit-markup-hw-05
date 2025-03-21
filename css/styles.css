@@ -615,6 +615,9 @@ body {
 
 .order-form-modal {
   position: relative;
+  margin-bottom: 8px;
+}
+.container-form-modal {
   margin-bottom: 16px;
 }
 .modal-label {
@@ -686,10 +689,11 @@ body {
 }
 
 .chekbox-input:checked + .custom-chekbox {
-  background-color: #404bbd;
-  fill: #f4f4fd;
+  background-color: #404bbf;
   border: none;
+  fill: #f4f4fd;
 }
+
 .chekbox-label {
   display: block;
   font-weight: 400;
