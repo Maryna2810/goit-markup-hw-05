@@ -586,7 +586,7 @@ body {
   border: 1px solid rgba(0, 0, 0, 0.1);
   align-items: center;
   justify-content: center;
-  background-color: #e7e9fc;
+  background-color: transparent;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
 }
@@ -688,12 +688,6 @@ body {
   margin-bottom: 24px;
 }
 
-.chekbox-input:checked + .chekbox-label > .custom-chekbox {
-  background-color: #404bbf;
-  border: none;
-  fill: #f4f4fd;
-}
-
 .chekbox-label {
   display: block;
   font-weight: 400;
@@ -718,9 +712,12 @@ body {
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.custom-chekbox-icon {
-  opacity: 0;
+.chekbox-input:checked + .chekbox-label > .custom-chekbox {
+  background-color: #404bbf;
+  border: none;
+  fill: #f4f4fd;
 }
+
 .privacy-link {
   text-decoration: underline;
   color: #4d5ae5;
